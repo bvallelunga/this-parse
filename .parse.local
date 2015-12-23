@@ -1,0 +1,13 @@
+{
+  "applications": {
+    "_default": {
+      "link": "debug"
+    },
+    "debug": {
+      "applicationId": "G9TbuDcsjrgciofmxTpEShjpMbwc0u09ZEBLh8C0"
+    },
+    "release": {
+      "applicationId": ""
+    }
+  }
+}

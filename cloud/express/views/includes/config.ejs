@@ -1,0 +1,10 @@
+<!-- Site Config -->
+<script type="text/javascript">
+  <%
+    config.csrf = csrf
+		config.host = host
+		config.title = title
+  %>
+    
+  window.config = JSON.parse(decodeURI('<%- encodeURI(JSON.stringify(config)) %>'));
+</script>

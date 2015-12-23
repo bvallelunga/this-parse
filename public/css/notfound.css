@@ -1,0 +1,25 @@
+.container {
+  width: 800px;
+  margin: 200px auto 0;
+  text-align: center;
+}
+
+.container .message {
+  color: #00C7FA;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  font-size: 125px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.container .submessage {
+  color: #00C7FA;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  font-size: 40px;
+  font-weight: 900;
+}
+
+body > .footer {
+	position: fixed;
+	bottom: 0;
+}
