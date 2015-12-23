@@ -5,15 +5,15 @@ Parse.Cloud.define("verifyPhone", function(req, res) {
   var token = "addf9c4db22654ab9b978999e319dd70"
   var client = Twilio(sid, token)
 
-  return Parse.Promise.as().then(function() {
-	  return client.sendSms({
-	    to: req.params.phone,
-	    from: "+18312004372",
-	    body: "#this code: " + req.params.code
-	  })
-  }).then(function() {
-		res.success("Twilio SMS code sent!")	  
-  }, function(error) {
-	  res.error(error.description)
+	return client.sendSms({
+    to: req.params.phone,
+    from: "+18312004372",
+    body: "#this code: " + req.params.code
+  }, function(err, responseData) {
+    if(err) {
+      res.error(error.description)
+    } else {
+      res.success("Twilio SMS code sent!")	
+    }
   })
 })
