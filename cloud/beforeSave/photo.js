@@ -2,14 +2,25 @@ var Image = require("parse-image")
 
 Parse.Cloud.beforeSave("Photo", function(req, res) {  
   var object = req.object
-  var original = object.get("original")
+  
+  Parse.Promise.as().then(function() {
+	  var original = object.get("original")
+		
+		if(!object.dirty("original") || original == null) {
+			return true
+		}
+		
+		return thumbnail(object)
+	}).then(function() {
+	  res.success()
+	}, function(error) {
+	  res.error(error)
+	})
+})
 
-	if(original == null || !object.dirty("original")) {
-    return res.success()
-  }
-	
-	Parse.Cloud.httpRequest({
-	  url: original.url()
+function thumbnail(object) {
+	return Parse.Cloud.httpRequest({
+	  url: object.get("original").url()
 	}).then(function(response) {
 	  var image = new Image()
 	  return image.setData(response.buffer)
@@ -36,10 +47,6 @@ Parse.Cloud.beforeSave("Photo", function(req, res) {
 		  base64: buffer.toString("base64") 
 		}).save()
 	}).then(function(cropped) {
-	  object.set("thumbnail", cropped)
-	}).then(function(result) {
-	  res.success()
-	}, function(error) {
-	  res.error(error)
+	  return object.set("thumbnail", cropped)
 	})
-})
+}
