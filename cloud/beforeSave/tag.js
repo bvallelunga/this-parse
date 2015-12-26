@@ -4,6 +4,7 @@ Parse.Cloud.beforeSave("Tag", function(req, res) {
 	if(object.isNew()) {
   	object.set("followerCount", 0)
 		object.set("photoCount", 0)
+		object.set("commentCount", 0)
 		return res.success()
 	}
   
