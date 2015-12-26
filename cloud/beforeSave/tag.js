@@ -12,11 +12,21 @@ Parse.Cloud.beforeSave("Tag", function(req, res) {
 	}).then(function() {
 		return photoCount(object)
 	}).then(function() {
+		return commentCount(object)
+	}).then(function() {
 	  res.success()
 	}, function(error) {
 	  res.error(error)
 	})
 })
+
+function commentCount(object) {
+	var query = object.relation("comments").query()
+	
+	return query.count().then(function(count) {
+		return object.set("commentCount", count)
+	})
+}
 
 function followerCount(object) {
 	var query = object.relation("followers").query()
