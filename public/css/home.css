@@ -36,6 +36,11 @@
   transform: translateX(-50%) translateY(-50%);
   background: url("/images/background.png") no-repeat;
   background-size: cover;
+  opacity: 0.7;
+}
+
+body {
+	background: #000;
 }
 
 body > .footer {
