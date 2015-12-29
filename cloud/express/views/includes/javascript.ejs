@@ -18,3 +18,7 @@ mixpanel.init("<%= mixpanelToken %>");
 <% } %>
 </script>
 <!-- end Mixpanel -->
+
+<% if(template == "home/index") { %>
+	<script type="text/javascript" src="/js/home.js?r=<%= random %>"></script>
+<% } %>

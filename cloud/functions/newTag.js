@@ -29,9 +29,13 @@ function randomTag() {
 	var noun = nouns[rand(nouns.length)]
 	var adjective = adjectives[rand(adjectives.length)]
 
-	return adjective + noun
+	return adjective + capitalize(noun)
 }
 
 function rand(limit) {
 	return Math.floor(Math.random() * limit)
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }

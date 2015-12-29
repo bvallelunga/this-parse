@@ -11,7 +11,7 @@ module.exports.download = function(req, res) {
 }
 
 module.exports.notfound = function(req, res) {
-  res.renderT('home/notfound')
+  res.renderT('home/index')
 }
 
 module.exports.terms = function(req, res) {
