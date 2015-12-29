@@ -10,8 +10,11 @@ Parse.Cloud.define("newTag", function(req, res) {
 
 function findTag() {
 	var query = new Parse.Query(Tag)
+	var photoQuery = new Parse.Query(Photo)
 	var tag = randomTag()
 	
+	photoQuery.greaterThan("expireAt", new Date())
+	query.matchesQuery("photos", photoQuery)
 	query.equalTo("name", tag)
 	
 	return query.count().then(function(count) {

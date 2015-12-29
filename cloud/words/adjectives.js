@@ -14,6 +14,6 @@ module.exports = [
 	"eager", "funny", "gentle", "good", "happy", "jolly", 
 	"kind", "lucky", "proud",  "silly", "well", "witty", "blonde", 
 	"bloody", "cute", "dark", "dirty", "dull", 
-	"fancy", "filthy", "homely", "light", "misty", 
+	"fancy", "filthy", "homely", "light", "misty", "king",
 	"muddy", "plain", "poised", "quaint", "scary", "ugly"
 ]
