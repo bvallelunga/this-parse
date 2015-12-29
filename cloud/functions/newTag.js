@@ -1,6 +1,7 @@
 var nouns = require("cloud/words/nouns")
 var adjectives = require("cloud/words/adjectives")
 var Tag = Parse.Object.extend("Tag")
+var Photo = Parse.Object.extend("Photo")
 
 Parse.Cloud.define("newTag", function(req, res) {	
 	return findTag().then(function(tag) {
