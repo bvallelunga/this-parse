@@ -9,7 +9,7 @@ module.exports = [
 	"soft", "afraid", "angry", "awful", "bad", 
 	"bored", "creepy", "cruel", "evil", "guilty", 
 	"hungry", "lonely", "mad", "scared", "shy", "sleepy", "sore", 
-	"tense", "tired", "upset", "OK", "brave", "bright", 
+	"tense", "tired", "upset", "ok", "brave", "bright", 
 	"eager", "funny", "gentle", "good", "happy", "jolly", 
 	"kind", "lucky", "proud",  "silly", "witty", "blonde", 
 	"bloody", "cute", "dark", "dirty", "dull", 
