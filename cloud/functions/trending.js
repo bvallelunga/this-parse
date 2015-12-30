@@ -12,6 +12,7 @@ Parse.Cloud.define("trending", function(req, res) {
 	query.descending("followerCount")
 	query.descending("updatedAt")
 	query.descending("photoCount")
+	query.limit(15)
 	
 	return query.find().then(function(tags) {				
 		return res.success(tags)
