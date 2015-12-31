@@ -7,11 +7,11 @@ Parse.Cloud.define("trending", function(req, res) {
 	
 	photoQuery.greaterThan("expireAt", new Date())
 	photoQuery.exists("original")
+	photoQuery.notEqualTo("flagged", true)
 	
 	query.matchesQuery("photos", photoQuery)
 	query.descending("followerCount")
 	query.descending("updatedAt")
-	query.descending("photoCount")
 	query.limit(15)
 	
 	return query.find().then(function(tags) {				
