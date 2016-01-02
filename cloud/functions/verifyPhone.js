@@ -1,4 +1,5 @@
 var Twilio = require('twilio')
+var User = Parse.User
 
 Parse.Cloud.define("verifyPhone", function(req, res) {
 	var sid = "ACdf6e01e0d0cd943e9aa2a45d6117d624"
@@ -10,10 +11,16 @@ Parse.Cloud.define("verifyPhone", function(req, res) {
     from: "+18312004372",
     body: "#this code: " + req.params.code
   }, function(err, responseData) {
-    if(err) {
-      res.error(error.description)
-    } else {
-      res.success("Twilio SMS code sent!")	
-    }
+    if(err) return res.error(error.description)
+        
+    var query = new Parse.Query(User)
+	
+		query.equalTo("phone", req.params.phone)
+		
+		return query.first().then(function(user) {
+			res.success(user ? ("@" + user.get("username")) : null)
+		}, function(error) {
+			res.error(error.description)
+		})
   })
 })
