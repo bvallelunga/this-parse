@@ -7,7 +7,7 @@ module.exports = [
 	"pig", "rabbit", "bunny", "rabbit", "sheep", 
 	"ram", "lamb", "tiger", "whale", "wolf", "bird", 
 	
-	"kim", "kendall", "jenner", "nicky",
+	"kim", "kendall", "jenner", "nicky", "glenn",
 	"adam", "johnny", "cyrus", "dave", "carly", "justin",
 	"chris", "martin", "khloe", "selena",
 	"simon", "louis", "will", "upton",
