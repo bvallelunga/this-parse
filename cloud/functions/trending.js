@@ -5,8 +5,8 @@ Parse.Cloud.define("trending", function(req, res) {
 	var query = new Parse.Query(Tag)
 	var photoQuery = new Parse.Query(Photo)
 	
-	photoQuery.greaterThan("expireAt", new Date())
 	photoQuery.exists("original")
+	photoQuery.greaterThan("expireAt", new Date())
 	photoQuery.notEqualTo("flagged", true)
 	
 	query.matchesQuery("photos", photoQuery)

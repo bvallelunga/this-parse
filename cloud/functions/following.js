@@ -6,8 +6,8 @@ Parse.Cloud.define("following", function(req, res) {
 	var photoQuery = new Parse.Query(Photo)
 	var user = Parse.User.current()
 	
+	//photoQuery.exists("original")
 	photoQuery.greaterThan("expireAt", new Date())
-	photoQuery.exists("original")
 	photoQuery.notEqualTo("flagged", true)
 	
 	query.matchesQuery("photos", photoQuery)
