@@ -1,16 +1,35 @@
 <html>
 	<body>
-		<title>#this - Avoid Asking BETA</title>
+		<title>#this - Avoid Asking [BETA] Tester&#39;s Guide</title>
 	</body>
 	<head>
 		<style type="text/css">
 		body{
 			font-family:sans-serif;
+			background-color:#11c4d4; /* 11d4b3 */
+			background: red; /* For browsers that do not support gradients */
+		    background: -webkit-linear-gradient(#11c4d4, #11d4b3); /* For Safari 5.1 to 6.0 */
+		    background: -o-linear-gradient(#11c4d4, #11d4b3); /* For Opera 11.1 to 12.0 */
+		    background: -moz-linear-gradient(#11c4d4, #11d4b3); /* For Firefox 3.6 to 15 */
+		    background: linear-gradient(#11c4d4, #11d4b3); /* Standard syntax */
+		}
+		#header{
+			color:white;
+		}
+		#header .logo-holder{
+			width:50px;
+			height:50px;
+			border-radius:5px;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			background: url('http://i.imgur.com/xDziBHN.png') no-repeat;
+			position:relative;
+			bottom:10px;
 		}
 		#wrapper{
 			margin:0 auto;
 			width:1000px;
-			margin-top:20px;
+			margin-top:50px;
 		}
 		#wrapper .step{
 			margin:10px 0px;
@@ -19,40 +38,63 @@
 		#wrapper .link{
 			float:right;
 		}
+		#content{
+			margin-top:15px;
+			background-color:white;
+			padding:10px;
+			padding-left:20px;
+			border:0px solid black;
+			border-radius:5px;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+		}
 		</style>
 		<div id="wrapper">
-			<h1><b>#this</b> - Testers Guide</h1>
-			<h3>Welcome to an exclusive round of testing #this before is released to the public. <br /><br />Your frequent usage and feedback is vital to the success of our app. You&#39;re 1 of only 15 testers.</h3>
-			<br />
-			<div class="step">
-				<p>
-					<b>Step 1</b><br />
-					Open the <i>App Store</i> on your iPhone and search for &quot;TestFlight&quot;, and install.
-				</p>
+			<div id="header">
+				<table border="0" style="width:100%; margin-bottom:-20px;">
+					<tr>
+						<td width="60px;">
+							<div class="logo-holder">
+								<!--<img src="http://i.imgur.com/PClhrUt.jpg" />-->
+							</div>
+						</td>
+						<td><h1 style="color:white;">Tester&#39;s Guide</h1></td>
+					</tr>
+				</table>
+				<h3>Welcome to an exclusive round of testing #this before is released to the public. <span style="text-decoration:underline; font-weight:500;">Your frequent usage and feedback is vital to the success of #this.</span></h3>
 			</div>
-			<div class="step">
-				<p>
-					<b>Step 2</b><br />
-					You should have already received an email with subject <b>TestFlight: Brian Vallelunga|204625366 invited you to test #this</b>, open the email and click &quot;Start Testing&quot;.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					<b>Step 3</b><br />
-					Open TestFlight on your phone. You should see #this appear in your list of available apps to test. Don&#39;t worry if you don&#39;t see the app it can take a few minutes to process and appear.
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					<b>Step 4</b><br />
-					Once #this appears, download it onto your phone, it will appear as a normal app on your phone, but will have a small orange dot to the left of the name. 
-				</p>
-			</div>
-			<div class="step">
-				<p>
-					<b>Step 5</b><br />
-					Start Testing! If you encounter an error or a bug, immediately post it on <a href="https://www.facebook.com/groups/1694131980822726/">#this Testing Feedback</a>.
-				</p>
+			<div id="content">
+				<h3>How to Install #this onto your phone</h3>
+				<div class="step">
+					<p>
+						<b>Step 1</b><br />
+						Open the <i>App Store</i> on your iPhone and search for &quot;TestFlight&quot;, and install.
+					</p>
+				</div>
+				<div class="step">
+					<p>
+						<b>Step 2</b><br />
+						You should have already received an email with subject <b>TestFlight: Brian Vallelunga|204625366 invited you to test #this</b>, open the email and click &quot;Start Testing&quot;.
+					</p>
+				</div>
+				<div class="step">
+					<p>
+						<b>Step 3</b><br />
+						Open TestFlight on your phone. You should see #this appear in your list of available apps to test. Don&#39;t worry if you don&#39;t see the app it can take a few minutes to process and appear.
+					</p>
+				</div>
+				<div class="step">
+					<p>
+						<b>Step 4</b><br />
+						Once #this appears, download it onto your phone, it will appear as a normal app on your phone, but will have a small orange dot to the left of the name. 
+					</p>
+				</div>
+				<div class="step">
+					<p>
+						<b>Step 5</b><br />
+						<b style="color:green;">Start Testing!</b> If you encounter an error or a bug, immediately post it on <a href="https://www.facebook.com/groups/1694131980822726/">#this Testing Feedback</a>.
+					</p>
+				</div>
 			</div>
 		</div>
 	</head>
