@@ -103,6 +103,7 @@ app.use(function(req, res, next) {
 app.get('/', routes.core.home)
 app.get('/download', routes.core.download)
 app.get('/tag/:tag', routes.core.download)
+app.get('/t/:tag', routes.core.download)
 
 // Terms & Privacy
 app.get('/terms', routes.core.terms)
