@@ -1,5 +1,5 @@
 .container {
-  width: 800px;
+  width: 100%;
   margin: 200px auto 0;
   text-align: center;
   position: relative;
@@ -11,7 +11,7 @@
   text-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
   font-size: 125px;
   font-weight: 900;
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 .container .submessage {
@@ -19,6 +19,7 @@
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   font-size: 40px;
   font-weight: 900;
+  margin: 0;
 }
 
 body {
@@ -28,4 +29,14 @@ body {
 body > .footer {
 	position: fixed;
 	bottom: 0;
+}
+
+@media (max-width: 500px) {	
+	.container .message {
+		font-size: 80;
+	}
+	
+	.container .submessage {
+		font-size: 25px;
+	}
 }

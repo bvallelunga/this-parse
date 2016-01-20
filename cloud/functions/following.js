@@ -6,6 +6,11 @@ Parse.Cloud.define("following", function(req, res) {
 	var photoQuery = new Parse.Query(Photo)
 	var user = Parse.User.current()
 	
+	if(!user && req.params.user) {
+		user = new Parse.User()
+		user.id = req.params.user	
+	}
+	
 	//photoQuery.exists("original")
 	photoQuery.greaterThan("expireAt", new Date())
 	photoQuery.notEqualTo("flagged", true)
@@ -18,6 +23,7 @@ Parse.Cloud.define("following", function(req, res) {
 	return query.find().then(function(tags) {				
 		return res.success(tags)
 	}, function(error) {
+		console.log(error)
 		return res.error(error.description)
 	})
 })
