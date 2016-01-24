@@ -2,10 +2,14 @@ var Image = require("parse-image")
 
 module.exports = function() {	
 	return Parse.Config.get().then(function(config) {
-			var random = Math.floor(Math.random() * (52 - 1)) + 1
+		var random = Math.floor(Math.random() * (52 - 1)) + 1
+		var url = config.get("host") + "/avatars/" + random + ".jpg"	
+		
+		console.log(url)
 		
 		return Parse.Cloud.httpRequest({
-		  url: config.get("host") + "/avatars/" + random + ".jpg"
+		  url: url,
+		  followRedirects: true
 		})
 	}).then(function(response) {
 	  var image = new Image()
