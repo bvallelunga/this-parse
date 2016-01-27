@@ -5,8 +5,6 @@ module.exports = function() {
 		var random = Math.floor(Math.random() * (52 - 1)) + 1
 		var url = config.get("host") + "/avatars/" + random + ".jpg"	
 		
-		console.log(url)
-		
 		return Parse.Cloud.httpRequest({
 		  url: url,
 		  followRedirects: true
